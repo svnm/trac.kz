@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0px;
+  height: 280px;
+  width: 100%;
+  background-color: #ddd;
+  text-align: center;
+}
+
+.dark {
+  color: #444;
+  background-color: #61dafb;
+  display: inline-block;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dark:hover  {
+  color: #444;
+  background-color: #61dafb;
+}
+
+.light {
+  color: #61dafb;
+  background-color: #444;
+  display: inline-block;
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.light:hover {
+  color: #61dafb;
+  background-color: #444;
+}

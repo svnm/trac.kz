@@ -1,0 +1,4 @@
+module.exports = {
+  RECEIVE_TRACKS: 'RECEIVE_TRACKS',
+  RECEIVE_TRACK: 'RECEIVE_TRACK'
+}

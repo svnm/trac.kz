@@ -1,0 +1,19 @@
+.home {
+  margin-top: 270px;
+}
+
+.home a {
+  font-size: 32px;
+  color: #808080;
+}
+.description {
+  font-size: 32px;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.description span{
+  color: #808080;
+  font-size: 32px;
+}
