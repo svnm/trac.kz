@@ -7,8 +7,7 @@ class Footer extends Component {
   render () {
     return (
     	<div styleName='footer'>
-    		<span>made with </span>
-    		<div styleName='heart'></div>
+    		<span>isekivace.nz</span>
     	</div>
     )
   }

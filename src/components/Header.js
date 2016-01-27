@@ -7,8 +7,12 @@ function Header() {
     <header>
       <div className={styles.header}>
 
-        <Link className={styles.dark} to="/">Home </Link>
-        <Link className={styles.light} to="/tracks">Trackz </Link>
+		<div className={styles.title}>
+			<h3>trac.kz</h3>
+		</div>
+
+        <Link className={styles.tab} to="/">Home </Link>
+        <Link className={styles.tab} to="/tracks">Trackz </Link>
 
       </div>
     </header>

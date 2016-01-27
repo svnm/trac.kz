@@ -1,60 +1,68 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux'
 import { fetchTracks } from '../actions/tracks'
-import Loader from '../components/Loader'
 import styles from './Tracks.css'
 
-function Tracks({ npmPackages, fetchPackages }) {
+import Loader from '../components/Loader'
+import TrackCard from '../components/TrackCard'
 
-  let packagesList = null 
-  let loader = <Loader />
+class Tracks extends Component {
 
-  if(npmPackages === undefined || !npmPackages.length){
-
-    //fetchTracks()
-
-  } else {
-
-    /* npm packages have loaded... */
-    loader = null
-
-    /*
-    packagesList = (
-      npmPackages.map(function (p) { 
-        return (
-          <li key={p.id}>
-            <Link to={`/package/${p.id}/${p.name}`}>
-              <p className={styles.name}>{p.name}</p>
-            </Link>
-          </li>
-        )
-      })
-    )
-    */
-
+  constructor (props) {
+    super(props)
+    this.fetch = this.fetch.bind(this)
   }
 
-  return (
-    <div className={styles.packages}>
+  componentDidMount () {
+    this.fetch(this.props.params.name)
+  }
 
-      <div className={styles.row}>
-        <h3 className={styles.title}>Select your react package...</h3>
+  fetch (name) {
+    this.props.dispatch(fetchTracks(name))    
+  }
+
+  render () {
+
+    const { tracks } = this.props
+
+    let component = null
+    let loader = <Loader />
+    let trackCards = null
+
+    if(tracks === undefined || !Object.keys(tracks).length ){
+      /* not loaded yet... */
+
+    } else {
+      /* loaded... */
+      loader = null
+
+      trackCards = (
+        tracks.map(function (t, i) { 
+          return (
+            <li key={i}>
+              <TrackCard {...t} />
+            </li>
+          )
+        })
+      )
+
+
+    }
+
+    return (
+      <div className={styles.tracks}>
+        { loader }
+        { trackCards }
       </div>
+    )
+  }
+}
 
-      { loader }
+function mapStateToProps(state) {
+  console.log(state)
+  return { 
+    tracks: state.trackz.tracks, 
+  }
+}
 
-      <div className={styles.list}>
-        <ul>      
-          { packagesList }
-        </ul>
-      </div>
-
-    </div>
-  );
-};
-
-export default connect(
-  state => ({ tracks: state.tracks }),
-  { fetchTracks }
-)(Tracks);
+export default connect(mapStateToProps)(Tracks)

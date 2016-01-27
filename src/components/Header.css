@@ -1,36 +1,39 @@
 .header {
   position: fixed;
   top: 0px;
-  height: 280px;
+  height: 100px;
   width: 100%;
   background-color: #ddd;
   text-align: center;
+  text-transform: uppercase;
 }
 
-.dark {
-  color: #444;
-  background-color: #61dafb;
+.tab {
+  color: #B0B0DD;
+  background-color: #444;
+  border-right: 2px solid #B0B0DD;
   display: inline-block;
   width: 50%;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.dark:hover  {
-  color: #444;
-  background-color: #61dafb;
-}
-
-.light {
-  color: #61dafb;
+.tab:hover {
+  color: #B0B0DD;
   background-color: #444;
-  display: inline-block;
-  width: 50%;
+}
+
+
+.title {
+  width: 100%;
+  background-color: #444;
+}
+
+.title h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.light:hover {
-  color: #61dafb;
-  background-color: #444;
 }

@@ -12,7 +12,6 @@ class Track extends Component {
   }
 
   componentDidMount () {
-    /* fetch the npm package */
     this.fetch(this.props.params.name)
   }
 
@@ -27,10 +26,10 @@ class Track extends Component {
     let loader = <Loader />
 
     if(track === undefined || !Object.keys(track).length ){
-      /* npm package not loaded yet... */
+      /* not loaded yet... */
 
     } else {
-      /* npm package has loaded... */
+      /* loaded... */
       loader = null
       component = <span>{track.title}</span>
 

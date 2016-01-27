@@ -20,7 +20,13 @@ function update(state = initialState, action) {
 			console.log(action)
 			return Object.assign({}, state, {
 				track: action.json
-			})			
+			})
+
+		case constants.RECEIVE_TRACKS:
+			console.log(action)
+			return Object.assign({}, state, {
+				tracks: action.json.collection
+			})
 
 		default:
 			return state
