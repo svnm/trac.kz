@@ -1,8 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchTrack } from '../actions/track'
-import Loader from '../components/Loader'
 import styles from './Track.css'
+
+import Loader from '../components/Loader'
+import TrackCardDetail from '../components/TrackCardDetail'
 
 class Track extends Component {
 
@@ -12,17 +14,17 @@ class Track extends Component {
   }
 
   componentDidMount () {
-    this.fetch(this.props.params.name)
+    this.fetch(this.props.params.id)
   }
 
-  fetch (name) {
-    this.props.dispatch(fetchTrack(name))    
+  fetch (id) {
+    this.props.dispatch(fetchTrack(id))    
   }
 
   render () {
 
     const { track } = this.props
-    let component = null
+    let trackCard = null
     let loader = <Loader />
 
     if(track === undefined || !Object.keys(track).length ){
@@ -31,14 +33,17 @@ class Track extends Component {
     } else {
       /* loaded... */
       loader = null
-      component = <span>{track.title}</span>
+
+      trackCard = (
+        <TrackCardDetail {...track} />
+      )
 
     }
 
     return (
       <div className={styles.track}>
         { loader }
-        { component }
+        { trackCard }
       </div>
     )
   }

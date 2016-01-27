@@ -39,9 +39,7 @@ class Tracks extends Component {
       trackCards = (
         tracks.map(function (t, i) { 
           return (
-            <li key={i}>
-              <TrackCard {...t} />
-            </li>
+              <TrackCard {...t} key={i} />
           )
         })
       )

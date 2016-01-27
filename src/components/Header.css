@@ -11,11 +11,10 @@
 .tab {
   color: #B0B0DD;
   background-color: #444;
-  border-right: 2px solid #B0B0DD;
   display: inline-block;
   width: 50%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -26,11 +25,31 @@
 
 
 .title {
-  width: 100%;
+  display: inline-block;
+  width: 70%;
   background-color: #444;
+  border-top: 1px solid #B0B0DD;
+  border-bottom: 1px solid #B0B0DD;
 }
 
 .title h3 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.soundcloud {
+  display: inline-block;
+  width: 30%;
+  background-color: #f85d0f;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.soundcloud h3 {
   color: #fff;
   text-transform: uppercase;
   margin: 0;
