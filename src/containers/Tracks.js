@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchTracks } from '../actions/tracks'
 import styles from './Tracks.css'
 
 import Loader from '../components/Loader'
-import TrackCard from '../components/TrackCard'
+import TrackCards from '../components/TrackCards'
 
 class Tracks extends Component {
 
@@ -23,11 +23,11 @@ class Tracks extends Component {
 
   render () {
 
-    const { tracks } = this.props
-
     let component = null
     let loader = <Loader />
     let trackCards = null
+    
+    const { tracks } = this.props
 
     if(tracks === undefined || !Object.keys(tracks).length ){
       /* not loaded yet... */
@@ -37,13 +37,8 @@ class Tracks extends Component {
       loader = null
 
       trackCards = (
-        tracks.map(function (t, i) { 
-          return (
-              <TrackCard {...t} key={i} />
-          )
-        })
+        <TrackCards {...this.props} />
       )
-
 
     }
 

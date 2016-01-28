@@ -1,9 +1,10 @@
 .trackCard {	
+	width: 100%;
 }
 
 .image {
 	height: auto;
-	width: 30%;
+	width: 50%;
 	display: block;
     margin: 0 auto;
     padding: 5%;
@@ -12,4 +13,5 @@
 .title {
 	color: #6d6e70;
 	text-align: center;
+	font-size: 12px;
 }

@@ -1,0 +1,25 @@
+.player {
+}
+
+.icons {
+	width: 100%;
+	padding-top: 5%;
+}
+.icon {
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+.image {
+	width: 40%;
+	height: auto;
+	display: block;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+.waveform {
+	height: 50px;
+	width: auto;
+	background-color: #f85d0f;
+}

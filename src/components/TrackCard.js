@@ -12,15 +12,11 @@ class TrackCard extends Component {
     const { title, artwork_url, id, permalink } = this.props
 
     return (
-      	<div styleName='trackCard grid'>
-            <div styleName="col-1-2">
-              <Link to={`/tracks/${id}/${permalink}`}>
+      	<div styleName='trackCard'>
+            <Link to={`/tracks/${id}/${permalink}`}>
               <h2 styleName='title'>{title}</h2>
-              </Link>
-            </div>
-            <div styleName="col-1-2">
-              <img styleName='image' src={artwork_url || 'not-found.jpg'} />
-            </div>
+            </Link>
+            <img styleName='image' src={artwork_url || '/public/img/not-found.png'} />
       	</div>
     )
   }

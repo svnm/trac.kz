@@ -1,28 +1,5 @@
 .tracks {
   background-color: #fff;
-  margin-top: 120px;
-  margin-bottom: 120px;
-}
-
-.title {
-  text-align: center;
-  color: #fff;
-}
-
-.list {
-	margin: 0 auto;
-	width: 40%;
-}
-
-.row {
-  background-color: #444;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.name {
-  font-size: 26px;
-  margin-bottom: 0px;
-  margin-top: 0px;  
+  margin-top: 100px;
+  margin-bottom: 100px;
 }

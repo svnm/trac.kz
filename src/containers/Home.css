@@ -1,9 +1,10 @@
 .home {
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   background-image: url('/public/img/purity-ring.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 100vh;
   width: 100%;
 }
 

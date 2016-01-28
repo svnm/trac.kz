@@ -1,20 +1,7 @@
 .trackCard {	
 }
 
-.image {
-	height: auto;
-	width: 30%;
-	display: block;
-    margin: 0 auto;
-    padding: 5%;
-}
-
 .title {
 	color: #6d6e70;
 	text-align: center;
-}
-
-.icon {
-	margin-left: 5px;
-	margin-right: 5px;	
 }

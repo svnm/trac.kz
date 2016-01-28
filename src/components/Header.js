@@ -1,33 +1,45 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
+import CSSModules from 'react-css-modules'
+import SC from 'soundcloud'
 import { Link } from 'react-router'
 import styles from './Header.css'
-import SC from 'soundcloud'
+import grid from '../styles/grid.css'
+Object.assign(styles, grid)
 
-function Header() {
+class Header extends Component {
 
-  loginUser()
+  render () {
 
-  return (
-    <header>
-      <div className={styles.header}>
+    return (
+        <div styleName='header grid'>
 
-		<div className={styles.title}>
-			<h3>trac.kz</h3>
-		</div>
-    <div className={styles.soundcloud}>
-      <h3>Sign in</h3>
-    </div>
+        <div styleName='title col-2-3 mobile-col-2-3'>
 
-        <Link className={styles.tab} to="/">Home </Link>
-        <Link className={styles.tab} to="/tracks">Trackz </Link>
+          <Link to="/">
+            <img styleName='logo' src='/public/img/trackz.png' />
+          </Link>
+
+          <Link to="/tracks">
+            <h3 styleName='text'>trac.kz</h3>
+          </Link>
+
+        </div>
+
+        <div styleName='soundcloud col-1-3 mobile-col-1-3'>
+          <h3 styleName='text'>Sign in</h3>
+        </div>
 
       </div>
-    </header>
-  )
+
+    )
+  }
+
 }
 
-export default Header
+export default CSSModules(Header, styles, {allowMultiple: true} )
 
+
+/*
 function loginUser(shouldShowStream = true) {
     return dispatch => {
         SC.initialize({
@@ -45,3 +57,4 @@ function loginUser(shouldShowStream = true) {
         .catch(err => { throw err; });
     };
 }
+*/

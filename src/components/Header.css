@@ -1,58 +1,38 @@
 .header {
   position: fixed;
   top: 0px;
-  height: 100px;
+  height: 80px;
   width: 100%;
   background-color: #ddd;
   text-align: center;
   text-transform: uppercase;
 }
 
-.tab {
-  color: #B0B0DD;
-  background-color: #444;
-  display: inline-block;
-  width: 50%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.tab:hover {
-  color: #B0B0DD;
-  background-color: #444;
-}
-
-
+/* title */
 .title {
-  display: inline-block;
-  width: 70%;
+  overflow: hidden;
   background-color: #444;
-  border-top: 1px solid #B0B0DD;
-  border-bottom: 1px solid #B0B0DD;
+  height: 80px;
 }
 
-.title h3 {
-  color: #fff;
-  text-transform: uppercase;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
+/* soundcloud */
 .soundcloud {
-  display: inline-block;
-  width: 30%;
   background-color: #f85d0f;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   cursor: pointer;
+  height: 80px;
 }
 
-.soundcloud h3 {
-  color: #fff;
+
+.text {
+  height: 90px;
+  line-height: 90px;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  color: #fff;
+}
+
+.logo {
+  height: 80px;
+  float: left;
 }

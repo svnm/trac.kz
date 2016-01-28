@@ -7,9 +7,6 @@ function Home({}) {
 
   return (
     <div className={styles.home}>
-      <p className={styles.description}>
-      <Link to='/tracks/333/cooltrack'>trackz...</Link>
-      </p>
     </div>
   );
 };
