@@ -1,0 +1,21 @@
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.imageCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imageCircle {
+	border-radius: 50%;
+}

@@ -1,6 +1,9 @@
 .track {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  background: #eee;
+  padding-top: 100px;
+  padding-bottom: 100px;
   padding-left: 5%;
   padding-right: 5%;
+  height: 100vh;
+  width: 100%;
 }

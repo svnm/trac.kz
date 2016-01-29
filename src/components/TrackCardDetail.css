@@ -5,3 +5,11 @@
 	color: #6d6e70;
 	text-align: center;
 }
+
+
+.avatar {
+  	composes: imageCenter from '../styles/positioning.css';
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}

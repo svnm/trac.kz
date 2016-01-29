@@ -16,7 +16,7 @@ class Header extends Component {
         <div styleName='title col-2-3 mobile-col-2-3'>
 
           <Link to="/">
-            <img styleName='logo' src='/public/img/trackz.png' />
+            <img styleName='logo grayscale' src='/public/img/trackz.png' />
           </Link>
 
           <Link to="/tracks">

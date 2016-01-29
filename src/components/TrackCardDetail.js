@@ -15,7 +15,7 @@ class TrackCard extends Component {
 
   render () {
     
-    const { title, artwork_url, id, permalink, waveform_url } = this.props
+    const { title, artwork_url, id, permalink, waveform_url, user } = this.props
 
     return (
       	<div styleName='trackCard grid'>
@@ -23,6 +23,7 @@ class TrackCard extends Component {
               <Link to={`/tracks/${id}/${permalink}`}>
                 <h2 styleName='title'>{title}</h2>
               </Link>
+              <img styleName='avatar' src={user.avatar_url || '/public/img/not-found.png'} />
             </div>
             <div styleName="col-1-2">
               <Player id={id} artwork_url={artwork_url} waveform_url={waveform_url} />              

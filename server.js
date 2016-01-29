@@ -1,16 +1,8 @@
 var path = require('path');
 var express = require('express');
-var webpack = require('webpack');
-var config = require('./webpack.config.dev');
-var request = require("request");
-
+var path = require('path');
+var favicon = require('serve-favicon');
 var app = express();
-var compiler = webpack(config);
-
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
 
 app.use('/public', express.static(__dirname + '/public'))
 

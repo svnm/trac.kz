@@ -5,6 +5,7 @@ import thunkMiddleware from 'redux-thunk'
 import createLogger from 'redux-logger'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute } from 'react-router'
+import useScroll from 'scroll-behavior/lib/useStandardScroll'
 import { createHistory } from 'history'
 import { syncReduxAndRouter, routeReducer } from 'redux-simple-router'
 import reducers from './reducers'
@@ -23,7 +24,6 @@ const reducer = combineReducers(
   )
 );
 
-
 /* logger */
 const loggerMiddleware = createLogger()
 
@@ -38,7 +38,8 @@ let initialState = undefined
 const store = createStoreWithMiddleware(reducer, initialState)
 
 /* history */
-const history = createHistory()
+/* const history = createHistory() */
+const history = useScroll(createHistory)()
 
 /* redux simple router */
 syncReduxAndRouter(history, store)

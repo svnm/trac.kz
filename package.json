@@ -1,9 +1,14 @@
 {
-  "name": "redux-simple-router-example",
+  "name": "trackz",
   "version": "1.0.0",
-  "description": "just an example of using redux simple router...",
+  "description": "just a music website...",
   "scripts": {
-    "start": "node serverDev.js"
+    "dist": "webpack --config webpack.config.js",
+    "build": "npm run clean && npm run dist",
+    "clean": "rm public/bundle.js && rm public/style.css || true",
+    "start": "npm run start:dev",
+    "start:dev": "node serverDev.js",
+    "start:prod": "NODE_ENV=production node server.js"
   },
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
   "license": "MIT",
@@ -20,6 +25,7 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "postcss-loader": "^0.7.0",
+    "postcss-modules-values": "^1.1.1",
     "redux-devtools": "^2.1.5",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.6",
@@ -29,7 +35,6 @@
   "dependencies": {
     "history": "^1.13.1",
     "isomorphic-fetch": "^2.2.0",
-    "marked": "^0.3.5",
     "react": "^0.14.2",
     "react-css-modules": "^3.6.1",
     "react-dom": "^0.14.2",
@@ -40,6 +45,8 @@
     "redux-simple-router": "0.0.8",
     "redux-thunk": "^1.0.3",
     "request": "^2.61.0",
-    "soundcloud": "^3.1.0"
+    "soundcloud": "^3.1.0",
+    "scroll-behavior": "^0.3.0",
+    "serve-favicon": "^2.3.0"
   }
 }

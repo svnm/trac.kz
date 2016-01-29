@@ -1,7 +1,15 @@
+@value colors: "../styles/colors.css";
+@value orange, white from colors;
+
+.grayscale {
+  composes: grayscale from '../styles/common.css';
+}
+
 .header {
   position: fixed;
+  z-index: 1;
   top: 0px;
-  height: 80px;
+  height: 60px;
   width: 100%;
   background-color: #ddd;
   text-align: center;
@@ -12,20 +20,20 @@
 .title {
   overflow: hidden;
   background-color: #444;
-  height: 80px;
+  height: 60px;
 }
 
 /* soundcloud */
 .soundcloud {
-  background-color: #f85d0f;
+  background-color: orange;
   cursor: pointer;
-  height: 80px;
+  height: 60px;
 }
 
 
 .text {
-  height: 90px;
-  line-height: 90px;
+  height: 60px;
+  line-height: 60px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0;
@@ -33,6 +41,6 @@
 }
 
 .logo {
-  height: 80px;
+  height: 60px;
   float: left;
 }
