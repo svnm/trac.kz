@@ -36,6 +36,7 @@
     "history": "^1.13.1",
     "isomorphic-fetch": "^2.2.0",
     "react": "^0.14.2",
+    "react-addons-css-transition-group": "^0.14.7",
     "react-css-modules": "^3.6.1",
     "react-dom": "^0.14.2",
     "react-redux": "^4.0.0",
@@ -45,8 +46,8 @@
     "redux-simple-router": "0.0.8",
     "redux-thunk": "^1.0.3",
     "request": "^2.61.0",
-    "soundcloud": "^3.1.0",
     "scroll-behavior": "^0.3.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "soundcloud": "^3.1.0"
   }
 }

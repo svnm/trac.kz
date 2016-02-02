@@ -6,6 +6,8 @@ import styles from './Track.css'
 import Loader from '../components/Loader'
 import TrackCardDetail from '../components/TrackCardDetail'
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 class Track extends Component {
 
   constructor (props) {
@@ -41,10 +43,13 @@ class Track extends Component {
     }
 
     return (
-      <div className={styles.track}>
-        { loader }
-        { trackCard }
-      </div>
+      <ReactCSSTransitionGroup className={styles.track} 
+                               component='div'
+                               transitionName="example" 
+                               transitionAppear={true} >
+          { loader }
+          { trackCard }
+      </ReactCSSTransitionGroup>
     )
   }
 }

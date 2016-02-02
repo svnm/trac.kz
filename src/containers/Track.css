@@ -1,3 +1,33 @@
+:global(
+	.example-enter {
+	  font-size: 12px;
+	  transition: font-size 1s ease-out;
+	}
+
+	.example-enter.example-enter-active {
+	    font-size: 1em;
+	}
+
+	.example-leave {
+	  opacity: 1;
+	  transition: opacity .5s ease-in;
+	}
+
+	.example-leave.example-leave-active {
+	  opacity: 0.01;
+	}
+
+	.example-appear {
+	  opacity: 0.01;
+	  transition: opacity 5s ease-in;
+	}
+
+	.example-appear.example-appear-active {
+	  opacity: 1;
+	}
+)
+
+
 .track {
   background: #eee;
   padding-top: 100px;
