@@ -1,14 +1,7 @@
-/*
-id
-c5a171200f3a0a73a523bba14a1e0a29
-secret
-4a1a341272a2a78a8c8a4e986f06bcbc
-*/
-
+import * as types from '../constants'
 import fetch from 'isomorphic-fetch'
-const constants = require('../constants');
 
-function fetchTracks(name) {
+export function fetchTracks() {
   return dispatch => {
     return fetch('//api.soundcloud.com/tracks?linked_partitioning=1&client_id=c5a171200f3a0a73a523bba14a1e0a29&limit=50&offset=0&q=pcmusic')
       .then(req => req.json())
@@ -16,12 +9,10 @@ function fetchTracks(name) {
   }
 }
 
-function receiveTracks(json) {
+export function receiveTracks(json) {
   return {
-    type: constants.RECEIVE_TRACKS,
+    type: types.RECEIVE_TRACKS,
     json: json,
     receivedAt: Date.now()
   }
 }
-
-module.exports = { fetchTracks, receiveTracks };

@@ -2,52 +2,53 @@
   "name": "trackz",
   "version": "1.0.0",
   "description": "just a music website...",
+  "main": "index.js",
   "scripts": {
     "dist": "webpack --config webpack.config.js",
     "build": "npm run clean && npm run dist",
     "clean": "rm public/bundle.js && rm public/style.css || true",
     "start": "npm run start:dev",
     "start:dev": "node serverDev.js",
-    "start:prod": "NODE_ENV=production node server.js"
+    "start:prod": "NODE_ENV=production node server.js",
+    "test": "ava tests/*.js"
   },
-  "author": "Steven Iseki <stevenisekimartin@gmail.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenIseki/deku-redux-router-example.git"
+  },
+  "keywords": [
+    "deku",
+    "redux",
+    "webpack"
+  ],
+  "dependencies": {
+    "deku": "^2.0.0-rc7",
+    "history": "^2.0.0",
+    "isomorphic-fetch": "^2.2.0",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.1",
+    "redux-thunk": "^1.0.3",
+    "request": "^2.61.0",
+    "serve-favicon": "^2.3.0",
+    "soundcloud": "^3.1.0"
+  },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
-    "babel-core": "^6.1.21",
+    "ava": "^0.11.0",
+    "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
-    "babel-plugin-transform-object-assign": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "babel-preset-stage-0": "^6.1.18",
+    "babel-plugin-transform-react-jsx": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
     "css-block-loader": "^1.0.1",
     "css-loader": "^0.15.1",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "postcss-loader": "^0.7.0",
     "postcss-modules-values": "^1.1.1",
-    "redux-devtools": "^2.1.5",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.6",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.0.0"
-  },
-  "dependencies": {
-    "history": "^1.13.1",
-    "isomorphic-fetch": "^2.2.0",
-    "react": "^0.14.2",
-    "react-addons-css-transition-group": "^0.14.7",
-    "react-css-modules": "^3.6.1",
-    "react-dom": "^0.14.2",
-    "react-redux": "^4.0.0",
-    "react-router": "^1.0.0",
-    "redux": "^3.0.4",
-    "redux-logger": "^2.3.1",
-    "redux-simple-router": "0.0.8",
-    "redux-thunk": "^1.0.3",
-    "request": "^2.61.0",
-    "scroll-behavior": "^0.3.0",
-    "serve-favicon": "^2.3.0",
-    "soundcloud": "^3.1.0"
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
   }
 }
