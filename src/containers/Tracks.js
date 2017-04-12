@@ -17,7 +17,7 @@ class Tracks extends Component {
     this.fetch(this.props.params.name)
   }
 
-  fetch (name) {
+  fetch (name = 'ladytron') {
     this.props.dispatch(fetchTracks(name))    
   }
 
@@ -26,7 +26,7 @@ class Tracks extends Component {
     let component = null
     let loader = <Loader />
     let trackCards = null
-    
+
     const { tracks } = this.props
 
     if(tracks === undefined || !Object.keys(tracks).length ){
@@ -53,8 +53,8 @@ class Tracks extends Component {
 
 function mapStateToProps(state) {
   console.log(state)
-  return { 
-    tracks: state.trackz.tracks, 
+  return {
+    tracks: state.trackz.tracks,
   }
 }
 

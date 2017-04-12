@@ -1,16 +1,12 @@
 .home {
-  margin-top: 60px;
-  margin-bottom: 40px;
-  background-image: url('/public/img/purity-ring.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
 }
-
 .home a {
   font-size: 32px;
-  color: #B0B0DD;
+}
+.image {
+  height: 400px;
+  margin: 0 auto;
+  filter: blur(5px);
 }
 .description {
   font-size: 32px;
@@ -20,6 +16,5 @@
 }
 
 .description span{
-  color: #B0B0DD;
   font-size: 32px;
 }

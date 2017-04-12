@@ -15,9 +15,9 @@ class TrackCards extends Component {
 
     const { tracks } = this.props
 
-    cards = tracks.map(function (t, i) { 
+    cards = tracks.map(function (t, i) {
       return (
-        <div styleName='trackCard col-1-4 mobile-col-1-2'>
+        <div styleName='trackCard col-1-3 mobile-col-1-1'>
           <TrackCard {...t} key={i} />
         </div>
       )

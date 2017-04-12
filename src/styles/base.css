@@ -1,22 +1,23 @@
 html {
-  color: #444;
-  font-family: 'Josefin Sans', sans-serif;
+  color: #6d6e70;
+  font-family: Menlo,Monaco,monospace;
   background-color: #fff;
+  padding: 20px;
 }
 
 p, h1, h2, h3, h4, h5, span, li {
-  color: #444;
+  color: #6d6e70;
   font-weight: normal;
 }
 
 a {
-  color: #444;
+  color: #6d6e70;
   text-decoration: none;
   font-size: 24px;
 }
 
 a:hover {
-  color: #B0B0DD;
+  color: #6d6e70;
   text-decoration: none;
 }
 
@@ -46,4 +47,3 @@ h1 {
     font-size: 30px;
     font-weight: normal;
 }
-

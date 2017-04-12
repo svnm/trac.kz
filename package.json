@@ -6,9 +6,8 @@
     "dist": "webpack --config webpack.config.js",
     "build": "npm run clean && npm run dist",
     "clean": "rm public/bundle.js && rm public/style.css || true",
-    "start": "npm run start:dev",
-    "start:dev": "node serverDev.js",
-    "start:prod": "NODE_ENV=production node server.js"
+    "dev": "node serverDev.js",
+    "site": "NODE_ENV=production node server.js"
   },
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
   "license": "MIT",
@@ -30,9 +29,7 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.6",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.0.0"
-  },
-  "dependencies": {
+    "webpack-hot-middleware": "^2.0.0",
     "history": "^1.13.1",
     "isomorphic-fetch": "^2.2.0",
     "react": "^0.14.2",

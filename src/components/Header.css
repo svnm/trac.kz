@@ -1,17 +1,13 @@
 @value colors: "../styles/colors.css";
 @value orange, white from colors;
 
-.grayscale {
-  composes: grayscale from '../styles/common.css';
-}
-
 .header {
   position: fixed;
   z-index: 1;
   top: 0px;
   height: 60px;
   width: 100%;
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center;
   text-transform: uppercase;
 }
@@ -19,7 +15,8 @@
 /* title */
 .title {
   overflow: hidden;
-  background-color: #444;
+  background-color: #fff;
+  color: #6d6e70;
   height: 60px;
 }
 
@@ -34,13 +31,16 @@
 .text {
   height: 60px;
   line-height: 60px;
-  font-weight: bold;
   text-transform: uppercase;
   margin: 0;
-  color: #fff;
 }
 
 .logo {
   height: 60px;
   float: left;
+}
+
+.icon {
+  display: inline-block;
+  padding-top: 10px;
 }
