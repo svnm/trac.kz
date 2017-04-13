@@ -18,6 +18,7 @@
   background-color: #fff;
   color: #6d6e70;
   height: 60px;
+  margin: 0;
 }
 
 /* soundcloud */
@@ -27,7 +28,6 @@
   height: 60px;
 }
 
-
 .text {
   height: 60px;
   line-height: 60px;
@@ -36,7 +36,7 @@
 }
 
 .logo {
-  height: 60px;
+  height: 100%;
   float: left;
 }
 
