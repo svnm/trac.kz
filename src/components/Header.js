@@ -16,9 +16,7 @@ class Header extends Component {
           <Link to="/">
             <img styleName='logo' src='/public/img/trackz.png' />
           </Link>
-          <Link to="/tracks">
-            <h3 styleName='text'>trac.kz</h3>
-          </Link>
+          <h3 styleName='text'>trac.kz</h3>
         </div>
       </div>
 

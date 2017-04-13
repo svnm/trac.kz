@@ -1,16 +1,18 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchTracks } from '../actions/tracks'
-import styles from './Tracks.css'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-import Loader from '../components/Loader'
+import { fetchTracks } from '../actions/tracks'
+import styles from './ArtistPage.css'
 import TrackCards from '../components/TrackCards'
 
-class Tracks extends Component {
-
+class ArtistPage extends Component {
   constructor (props) {
     super(props)
     this.fetch = this.fetch.bind(this)
+    this.state = {
+      tracks: []
+    }
   }
 
   componentDidMount () {
@@ -18,35 +20,32 @@ class Tracks extends Component {
   }
 
   fetch (name = 'ladytron') {
-    this.props.dispatch(fetchTracks(name))    
+    this.props.dispatch(fetchTracks(name))
   }
 
   render () {
-
     let component = null
-    let loader = <Loader />
     let trackCards = null
 
     const { tracks } = this.props
 
     if(tracks === undefined || !Object.keys(tracks).length ){
       /* not loaded yet... */
-
     } else {
       /* loaded... */
-      loader = null
-
       trackCards = (
         <TrackCards {...this.props} />
       )
-
     }
 
     return (
-      <div className={styles.tracks}>
-        { loader }
+      <ReactCSSTransitionGroup
+        className={styles.artists}
+        component='div'
+        transitionName='example'
+        transitionAppear={true} >
         { trackCards }
-      </div>
+      </ReactCSSTransitionGroup>
     )
   }
 }
@@ -58,4 +57,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Tracks)
+export default connect(mapStateToProps)(ArtistPage)

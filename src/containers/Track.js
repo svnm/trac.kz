@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { fetchTrack } from '../actions/track'
 import styles from './Track.css'
 
-import Loader from '../components/Loader'
 import TrackCardDetail from '../components/TrackCardDetail'
 
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
@@ -20,34 +19,28 @@ class Track extends Component {
   }
 
   fetch (id) {
-    this.props.dispatch(fetchTrack(id))    
+    this.props.dispatch(fetchTrack(id))
   }
 
   render () {
-
     const { track } = this.props
     let trackCard = null
-    let loader = <Loader />
 
     if(track === undefined || !Object.keys(track).length ){
       /* not loaded yet... */
-
     } else {
       /* loaded... */
-      loader = null
-
       trackCard = (
         <TrackCardDetail {...track} />
       )
-
     }
 
     return (
-      <ReactCSSTransitionGroup className={styles.track} 
-                               component='div'
-                               transitionName="example" 
-                               transitionAppear={true} >
-          { loader }
+      <ReactCSSTransitionGroup
+        className={styles.track}
+        component='div'
+        transitionName='example'
+        transitionAppear={true} >
           { trackCard }
       </ReactCSSTransitionGroup>
     )
@@ -56,8 +49,8 @@ class Track extends Component {
 
 function mapStateToProps(state) {
   console.log(state)
-  return { 
-    track: state.trackz.track, 
+  return {
+    track: state.trackz.track,
   }
 }
 

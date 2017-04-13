@@ -7,7 +7,7 @@
 }
 .icon {
 	margin-left: 10px;
-	margin-right: 10px;	
+	margin-right: 10px;
 }
 
 .image {
@@ -18,7 +18,7 @@
 }
 
 .waveform {
-	height: 100px;
+	height: 50px;
 	width: auto;
-	background-color: #f85d0f;
+	background-color: #faf1B5;
 }

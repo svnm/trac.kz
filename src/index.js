@@ -11,7 +11,7 @@ import { syncReduxAndRouter, routeReducer } from 'redux-simple-router'
 import reducers from './reducers'
 
 /* container route components */
-import Tracks from './containers/Tracks'
+import ArtistPage from './containers/ArtistPage'
 import Track from './containers/Track'
 import Home from './containers/Home'
 import App from './containers/App'
@@ -56,7 +56,7 @@ ReactDOM.render(
         <Route path="/" component={App}>
 
           <IndexRoute component={Home}/>
-          <Route path="tracks" component={Tracks} />
+          <Route path="artists/:name" component={ArtistPage} />
           <Route path="tracks/:id/:name" component={Track}/>
         </Route>
       </Router>

@@ -1,11 +1,14 @@
 .home {
+  margin-top: 60px;
+  margin-left: 60px;
 }
 .home a {
   font-size: 32px;
 }
 .image {
-  height: 400px;
+  width: 600px;
   margin: 0 auto;
+  margin-top: 10px;
   filter: blur(5px);
 }
 .description {

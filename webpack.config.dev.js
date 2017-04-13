@@ -18,8 +18,8 @@ module.exports = {
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
     ]
   },
-  postcss: [ 
-    autoprefixer({ browsers: ['last 2 versions'] }), values 
+  postcss: [
+    autoprefixer({ browsers: ['last 2 versions'] }), values
   ],
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true })
