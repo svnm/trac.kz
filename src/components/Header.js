@@ -12,12 +12,12 @@ class Header extends Component {
 
     return (
         <div styleName='header grid'>
-        <div styleName='title col-1-3'>
-          <Link to="/">
+        <Link to="/">
+          <div styleName='title col-1-3'>
             <img styleName='logo' src='/public/img/trackz.png' />
-          </Link>
-          <h3 styleName='text'>trac.kz</h3>
-        </div>
+            <h3 styleName='text'>trac.kz</h3>
+          </div>
+        </Link>
       </div>
 
     )
